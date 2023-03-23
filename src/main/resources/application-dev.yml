@@ -9,4 +9,8 @@ spring:
       host: localhost
       database: example-project
       authentication-database: admin
+    #Now add redis - this is a cache so we dont access db with every request
+    redis:
+      host: localhost
+      port: 6371
 #just make your first create and it works
