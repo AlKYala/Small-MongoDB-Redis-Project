@@ -1,0 +1,12 @@
+server:
+  port: 8080
+spring:
+  data:
+    mongodb:
+      username: root
+      password: example
+      port: 27017
+      host: localhost
+      database: example-project
+      authentication-database: admin
+#just make your first create and it works
