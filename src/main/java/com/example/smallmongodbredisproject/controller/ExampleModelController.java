@@ -13,7 +13,7 @@ public class ExampleModelController {
     private ExampleService exampleService;
 
     @PostMapping("/create")
-    private ExampleModel create(ExampleModel model) {
+    private ExampleModel create(@RequestBody ExampleModel model) {
         return this.exampleService.create(model);
     }
 
