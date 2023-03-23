@@ -12,5 +12,5 @@ spring:
     #Now add redis - this is a cache so we dont access db with every request
     redis:
       host: localhost
-      port: 6371
+      port: 6379
 #just make your first create and it works
