@@ -5,8 +5,10 @@ import com.example.smallmongodbredisproject.service.ExampleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
-@RequestMapping("/example")
+@RequestMapping("/api/example")
 public class ExampleModelController {
 
     @Autowired
@@ -20,5 +22,10 @@ public class ExampleModelController {
     @GetMapping("/{id}")
     private ExampleModel findById(@PathVariable String id) {
         return this.exampleService.findById(id);
+    }
+
+    @GetMapping
+    private List<ExampleModel> findAll() {
+        return this.exampleService.findAll();
     }
 }
