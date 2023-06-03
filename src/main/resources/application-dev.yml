@@ -11,4 +11,3 @@ spring:
       host: localhost
       database: example-project
       authentication-database: admin
-#just make your first create and it works

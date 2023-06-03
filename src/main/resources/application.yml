@@ -1,3 +1,7 @@
 spring:
   application:
     name: 'Example-MongoDB-App'
+springdoc:
+  api-docs:
+    enabled: true
+
