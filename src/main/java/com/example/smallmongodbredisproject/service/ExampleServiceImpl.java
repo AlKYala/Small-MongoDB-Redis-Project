@@ -28,6 +28,9 @@ public class ExampleServiceImpl implements ExampleService {
 
     @Override
     public ExampleModel create(ExampleModel model) {
+        if(model.getId() == null || model.getId().isEmpty()) {
+            model.setId(System.currentTimeMillis() + model.hashCode() + "");
+        }
         return exampleRepository.save(model);
     }
 
