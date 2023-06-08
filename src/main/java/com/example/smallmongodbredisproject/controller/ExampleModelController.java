@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/example")
+@RequestMapping("/api/example")
 @Slf4j
 public class ExampleModelController {
 
@@ -28,7 +28,7 @@ public class ExampleModelController {
         return this.exampleService.findById(id);
     }
 
-    @GetMapping()
+    @GetMapping
     private List<ExampleModel> findAll() {
         log.info("RECEIVE FIND ALL CALL");
         return this.exampleService.findAll();
