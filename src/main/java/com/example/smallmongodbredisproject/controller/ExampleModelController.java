@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/example")
-@CrossOrigin
+@Slf4j
 public class ExampleModelController {
 
     @Autowired
@@ -17,16 +17,19 @@ public class ExampleModelController {
 
     @PostMapping("/create")
     private ExampleModel create(@RequestBody ExampleModel model) {
+        log.info("RECEIVE CREATE CALL");
         return this.exampleService.create(model);
     }
 
     @GetMapping("/{id}")
     private ExampleModel findById(@PathVariable String id) {
+        log.info("RECEIVE FIND BY ID CALL");
         return this.exampleService.findById(id);
     }
 
     @GetMapping
     private List<ExampleModel> findAll() {
+        log.info("RECEIVE FIND ALL CALL");
         return this.exampleService.findAll();
     }
 }
